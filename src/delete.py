@@ -1,7 +1,7 @@
 import os
 import random
 
-def delete_random_images(directory, delete_percentage=0.7):
+def delete_random_images(directory, delete_percentage=0.2):
     for root, dirs, files in os.walk(directory):
         image_files = [f for f in files if os.path.splitext(f)[1].lower() in ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff']]
         num_to_delete = int(len(image_files) * delete_percentage)
